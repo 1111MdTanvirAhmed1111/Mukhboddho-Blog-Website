@@ -3,7 +3,7 @@ import { getPosts, deletePost } from '../../../lib/post-actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import EditPostForm from './EditPostForm';
-
+export const preventSSG = true;
 export default async function PostList() {
   const posts = await getPosts();
 
