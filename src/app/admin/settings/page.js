@@ -28,7 +28,7 @@ async function getSettings() {
   }
 }
 
-async function updateSettings(formData: FormData) {
+async function updateSettings(formData) {
   'use server'
   
   const siteName = formData.get('siteName')
