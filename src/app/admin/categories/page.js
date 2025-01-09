@@ -85,7 +85,7 @@ export default function CategoriesPage() {
         <TableBody>
           {categories.map((category) => (
             <TableRow key={category.id}>
-              <TableCell<TableCell>{category.name}</TableCell>
+            <TableCell>{category.name}</TableCell>
               <TableCell>{category.postCount}</TableCell>
               <TableCell>
                 <Button variant="outline" className="mr-2" onClick={() => handleEdit(category)}>Edit</Button>
