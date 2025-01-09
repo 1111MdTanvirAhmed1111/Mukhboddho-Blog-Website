@@ -5,7 +5,7 @@
         "./src/*"
       ]
     },
-    "target": "ES2017",
+    "target": "ES2024",
     "lib": [
       "dom",
       "dom.iterable",
@@ -33,7 +33,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/admin/components/UserEngagement.js", "src/app/admin/components/TopPosts.js", "src/app/admin/components/RecentSales.js"  ],
   "exclude": [
     "node_modules"
   ]
