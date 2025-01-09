@@ -1,3 +1,4 @@
+'use server'
 import { BlogCard } from '@/components/blog-card'
 import { dbConnect } from '@/lib/mongodb';
 import { Post } from '@/models/Post';
