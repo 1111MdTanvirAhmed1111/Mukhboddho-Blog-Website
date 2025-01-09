@@ -3,7 +3,7 @@ import { BlogCard } from '@/components/blog-card'
 import { dbConnect } from '@/lib/mongodb';
 import { Post } from '@/models/Post';
 import Link from 'next/link'
-export const preventSSG = true;
+export const ssg = false;
 async function page() {
     await dbConnect()
     const data = await Post.find({})
