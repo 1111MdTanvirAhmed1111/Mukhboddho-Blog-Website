@@ -2,14 +2,12 @@
 import { BlogCard } from '@/components/blog-card'
 
 import Link from 'next/link'
-import { revalidatePath } from 'next/cache';
-import { getPosts } from '@/lib/post-actions';
 
 async function page() {
 
-
-    const arr = await getPosts();
-
+const data = await fetch('https://mukhboddho.vercel.app/api/posts/',{ cache: 'no-store' })
+    const arr = await data.json()
+console.log(arr)
 
   return (
     <main className="container mx-auto px-4 py-12">
