@@ -10,7 +10,24 @@ import Login from './../components/login-btn';
 import { Button } from '@/components/ui/button';
 
 export default async function page() {
-
+  const socialLinks = [
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/agonttok',
+      icon: Instagram,
+    },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/agonttok',
+      icon: Facebook,
+    },
+    {
+      name: 'X',
+      url: 'https://x.com/b_omayer',
+      icon: Twitter,
+    },
+  ]
+  
 
   return (
     <div>
