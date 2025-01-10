@@ -5,6 +5,7 @@ import { blogPosts } from '@/data/blog-posts'
 
 import HeaderSlider from '@/components/HeaderSlider'
 import CatagoriesSection from './../components/catagories/CatagoriesSection';
+import { Facebook, Instagram, Twitter } from 'lucide-react'
 
 import Login from './../components/login-btn';
 import { Button } from '@/components/ui/button';
