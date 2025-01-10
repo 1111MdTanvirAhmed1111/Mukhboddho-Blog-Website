@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <link rel="icon" href="https://scontent.fdac41-2.fna.fbcdn.net/v/t39.30808-6/472974023_514865984947690_8222708174281924616_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iITOGqa86qAQ7kNvgEoKi7Z&_nc_zt=23&_nc_ht=scontent.fdac41-2.fna&_nc_gid=Aks5e35sUEvRpDLyTAhNk7b&oh=00_AYBX6dvlTubwzsZI81t_sYLQnFnONtpzzu85GhMiGmbAew&oe=6786F340" sizes="any" />
+      <link rel="icon" href="/logo.ico" sizes="any" />
   <SessionWrapper>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
