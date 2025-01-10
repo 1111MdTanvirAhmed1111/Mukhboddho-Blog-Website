@@ -6,6 +6,7 @@ import SessionWrapper from './../components/session-wrapper';
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
+import BreadCrumb from './../components/BreadCrumb';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,8 +44,12 @@ export default function RootLayout({ children }) {
               muted: "0 0% 96.1%",
             }}
           >
+ <div className="relative">
         <Navbar />
+        <BreadCrumb  />
+        </div>
         <Suspense fallback={<Loading/>}>
+       
         {children}
         </Suspense>
       </ThemeProvider>

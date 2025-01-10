@@ -15,32 +15,32 @@ const sidebarNavItems = [
     items: [
       {
         title: "Dashboard",
-        href: "/adminNext2",
+        href: "/admin",
         icon: LayoutDashboard,
       },
       {
         title: "Blog Posts",
-        href: "/adminNext2/blog-posts",
+        href: "/admin/blog-posts",
         icon: FileText,
       },
       {
         title: "Comments",
-        href: "/adminNext2/comments",
+        href: "/admin/comments",
         icon: MessageSquare,
       },
       {
         title: "Users",
-        href: "/adminNext2/users",
+        href: "/admin/users",
         icon: Users,
       },
       {
         title: "Analytics",
-        href: "/adminNext2/analytics",
+        href: "/admin/analytics",
         icon: BarChart,
       },
       {
         title: "Settings",
-        href: "/adminNexdsadsdtings",
+        href: "/admin/settings",
         icon: Settings,
       },
     ],
@@ -56,6 +56,7 @@ export function Sidebar() {
     setOpen(false)
   }, [pathname])
 
+  console.log(pathname)
   return (
     <>
       <Sheet open={open} onOpenChange={setOpen}>
@@ -87,8 +88,8 @@ export function Sidebar() {
                           onClick={() => setOpen(false)}
                         >
                           <Button
-                            variant={pathname === subItem.href ? "secondary" : "ghost"}
-                            className="w-full justify-start"
+                           className={`w-full justify-start bg-orange-400 ${pathname == subItem.href ? "bg-slate-500" : ""}`}
+                         
                           >
                             <subItem.icon className="mr-2 h-4 w-4" />
                             {subItem.title}
