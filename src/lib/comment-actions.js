@@ -15,7 +15,7 @@ export async function getComments(id) {
 
 export async function createComment(id,formData) {
   formData.append("post",id)
-  formData.append("author","tanvir")
+  formData.append("author","পথনুসন্ধানী")
   await dbConnect();
   const comment = await Comment.create(Object.fromEntries(formData));
   revalidatePath('/admin');

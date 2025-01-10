@@ -27,10 +27,10 @@ const CommentsCard = ({ author, date, _id,content}) => {
               
 
 
-              <EditComment content={content} id={_id}/>
-                  <Button variant="outline" size="sm" onClick={deleteComment.bind(null,_id)}>
+              {/* <EditComment content={content} id={_id}/> */}
+                  {/* <Button variant="outline" size="sm" onClick={deleteComment.bind(null,_id)}>
                     Delete
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <p className="text-gray-700">{content}</p>
