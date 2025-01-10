@@ -5,8 +5,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import EditPostForm from './EditPostForm';
 
 export default async function PostList() {
-  const posts = await getPosts();
-
+  const data = await fetch('https://mukhboddho.vercel.app/api/posts/',{ cache: 'no-store' })
+  const posts = await data.json()
   return (
     <div className="space-y-4">
       {posts.map((post) => (
