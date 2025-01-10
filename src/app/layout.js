@@ -19,13 +19,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mukhboddho",
-  description: "Mukhboddho by Omayer",
+  title: "পথচ্যুত",
+  description: "  আমাদের মত পথ হারা সকল মানুষের জন্য আল্লাহ পাঠিয়েছেন ইসলাম। তবে পাশ্চ্যাত্তের লাগাতার আগ্রাশনের পথে আমরা আরো পথ থেকে সরে গিয়েছি। ইসলামের ইতিহাস, পাশ্চাত্যের ব্যার্থ সমাজ, কবরের সদকায়ে জারিয়ার জন্যের আমাদের এই আয়োজন। আল্লাহকে খুশি করার নিয়তে উম্মাহর সাথে থাকুন, নিজের সর্বচ্চ দিয়ে সাহায্য করুন। জাজাকুমুল্লাহ খাইরান।",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning >
+      <link rel="icon" href="https://scontent.fdac41-2.fna.fbcdn.net/v/t39.30808-6/472974023_514865984947690_8222708174281924616_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iITOGqa86qAQ7kNvgEoKi7Z&_nc_zt=23&_nc_ht=scontent.fdac41-2.fna&_nc_gid=Aks5e35sUEvRpDLyTAhNk7b&oh=00_AYBX6dvlTubwzsZI81t_sYLQnFnONtpzzu85GhMiGmbAew&oe=6786F340" sizes="any" />
   <SessionWrapper>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}

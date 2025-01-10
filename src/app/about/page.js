@@ -51,17 +51,7 @@ export default function AboutPage() {
         </Card>
         <Card>
           <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Blog Mission</h2>
-            <p className="mb-4">
-              My mission with this blog is to demystify web development concepts and 
-              empower developers to create amazing digital experiences. I believe in:
-            </p>
-            <ul className="space-y-2">
-              <li>• Sharing practical, real-world knowledge</li>
-              <li>• Encouraging continuous learning and growth</li>
-              <li>• Fostering a supportive developer community</li>
-              <li>• Promoting best practices in coding and design</li>
-            </ul>
+          আমাদের মত পথ হারা সকল মানুষের জন্য আল্লাহ পাঠিয়েছেন ইসলাম। তবে পাশ্চ্যাত্তের লাগাতার আগ্রাশনের পথে আমরা আরো পথ থেকে সরে গিয়েছি। ইসলামের ইতিহাস, পাশ্চাত্যের ব্যার্থ সমাজ, কবরের সদকায়ে জারিয়ার জন্যের আমাদের এই আয়োজন। আল্লাহকে খুশি করার নিয়তে উম্মাহর সাথে থাকুন, নিজের সর্বচ্চ দিয়ে সাহায্য করুন। জাজাকুমুল্লাহ খাইরান।
           </CardContent>
         </Card>
       </div>
