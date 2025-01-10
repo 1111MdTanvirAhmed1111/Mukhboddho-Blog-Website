@@ -7,6 +7,7 @@ import HeaderSlider from '@/components/HeaderSlider'
 import CatagoriesSection from './../components/catagories/CatagoriesSection';
 
 import Login from './../components/login-btn';
+import { Button } from '@/components/ui/button';
 
 export default async function page() {
 
