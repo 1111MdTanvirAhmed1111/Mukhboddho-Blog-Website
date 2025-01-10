@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-
+import {CldUploadWidget} from "next-cloudinary"
 export default function PostForm() {
   const formRef = useRef();
   async function handleSubmit(formData) {
@@ -31,6 +31,9 @@ export default function PostForm() {
       <div>
         <Label htmlFor="imageUrl">Image URL</Label>
         <Input id="imageUrl" name="imageUrl" />
+      </div>
+      <div>
+
       </div>
       <div>
         <Label htmlFor="category">Category</Label>

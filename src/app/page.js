@@ -1,4 +1,4 @@
-
+'use client'
 import Link from 'next/link'
 
 import { blogPosts } from '@/data/blog-posts'
@@ -7,6 +7,7 @@ import HeaderSlider from '@/components/HeaderSlider'
 import CatagoriesSection from './../components/catagories/CatagoriesSection';
 
 import Login from './../components/login-btn';
+import { CldUploadWidget } from 'next-cloudinary';
 
 
 export default async function page() {
@@ -14,6 +15,16 @@ export default async function page() {
 
   return (
     <div>
+      <CldUploadWidget uploadPreset={process.env.upload_preset} cloudName={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}>
+  {({ open }) => {
+    return (
+      <button onClick={() => open()}>
+        Upload an Image
+      </button>
+    );
+  }}
+</CldUploadWidget>
+
       {/* <Login /> */}
       {/* <HeaderSlider />
       <CatagoriesSection /> */}
