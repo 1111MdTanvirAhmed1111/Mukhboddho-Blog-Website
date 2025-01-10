@@ -56,7 +56,6 @@ export function Sidebar() {
     setOpen(false)
   }, [pathname])
 
-  console.log(pathname)
   return (
     <>
       <Sheet open={open} onOpenChange={setOpen}>
@@ -88,8 +87,8 @@ export function Sidebar() {
                           onClick={() => setOpen(false)}
                         >
                           <Button
-                           className={`w-full justify-start bg-orange-400 ${pathname == subItem.href ? "bg-slate-500" : ""}`}
-                         
+                            variant={pathname === subItem.href ? "secondary" : "ghost"}
+                            className="w-full justify-start"
                           >
                             <subItem.icon className="mr-2 h-4 w-4" />
                             {subItem.title}
