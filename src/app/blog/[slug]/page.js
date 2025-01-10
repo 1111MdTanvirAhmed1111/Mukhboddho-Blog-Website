@@ -50,9 +50,9 @@ const post = JSON.parse(JSON.stringify(await Post.findOne({_id: iparams.slug})))
 
 
 
-{/* 
 
-      <CommentArea id={iparams.slug}/> */}
+
+      <CommentArea id={iparams.slug}/>
 
     </article>
   )
