@@ -1,16 +1,15 @@
 
 import { BlogCard } from '@/components/blog-card'
-import { dbConnect } from '@/lib/mongodb';
-import { Post } from '@/models/Post';
+
 import Link from 'next/link'
+import { revalidatePath } from 'next/cache';
+import { getPosts } from '@/lib/post-actions';
 
 async function page() {
-    await dbConnect()
-    const data = await Post.find({})
 
 
-    const arr = JSON.parse(JSON.stringify(data))
-    
+    const arr = await getPosts();
+
 
   return (
     <main className="container mx-auto px-4 py-12">

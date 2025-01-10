@@ -44,10 +44,10 @@ export default function RootLayout({ children }) {
               muted: "0 0% 96.1%",
             }}
           >
- <div className="relative">
+
         <Navbar />
         <BreadCrumb  />
-        </div>
+       
         <Suspense fallback={<Loading/>}>
        
         {children}

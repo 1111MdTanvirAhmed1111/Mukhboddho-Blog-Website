@@ -9,7 +9,6 @@ import { Post } from '@/models/Post';
 export async function getPosts() {
   await dbConnect();
   const posts = await Post.find({}).sort({ date: -1 });
-  revalidatePath('/')
   return JSON.parse(JSON.stringify(posts));;
 }
 
