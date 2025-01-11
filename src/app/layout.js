@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
             }}
           >
 
-        <Navbar />
+            <Navbar />
         <BreadCrumb  />
        
         <Suspense fallback={<Loading/>}>

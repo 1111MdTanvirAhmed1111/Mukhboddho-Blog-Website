@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/popover"
 import { useTheme } from "./ThemeProvider"
 import { useState } from "react"
-import { Image } from 'next/image';
+import Image from "next/image"
 
 export default function Navbar() {
   const { toggleTheme, theme } = useTheme()
@@ -45,9 +45,9 @@ const navs = [
     <header className="sticky top-0 z-50 w-full border-b bg-white dark:border-gray-800 dark:bg-gray-950">
       <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <MountainIcon className="h-6 w-6" />
+
           <span className="sr-only">  <Image
-      src="https://scontent.fdac41-2.fna.fbcdn.net/v/t39.30808-6/472974023_514865984947690_8222708174281924616_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iITOGqa86qAQ7kNvgEoKi7Z&_nc_zt=23&_nc_ht=scontent.fdac41-2.fna&_nc_gid=AMJanh578d_yp6fm2exR_cC&oh=00_AYDxzLbCMZotgKD1aRfmK-VYDtQzw7IS3ufjzNJA9V_42g&oe=6786F340"
+      src="/logo.jpg"
       width={500}
       height={500}
       alt="Picture of the author"
