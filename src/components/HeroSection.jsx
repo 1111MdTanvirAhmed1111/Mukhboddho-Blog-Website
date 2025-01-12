@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default async function HeroSection() {
+export default async function HeroSection({data}) {
 
-  const res = await fetch('http://localhost:3000/api/posts/featured')
- const re = await res.json()
- const data = re[0]
-console.log(data)
+
+
   return (
     (<section className="relative h-[60vh] md:h-[70vh] overflow-hidden rounded-xl">
       <Image

@@ -1,27 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const recentPosts = [
-  { id: 1, title: 'বাংলাদেশের অর্থনীতি: ২০২৫ সালের লক্ষ্যমাত্রা' },
-  { id: 2, title: 'ঢাকার যানজট: সমস্যা ও সমাধান' },
-  { id: 3, title: 'বাংলা ভাষার ইতিহাস ও বিবর্তন' },
-]
+
 
 const authors = [
   { id: 1, name: 'ড. রফিকুল ইসলাম', image: '/author1.jpg', bio: 'বিশিষ্ট কলামিস্ট ও রাজনৈতিক বিশ্লেষক' },
   { id: 2, name: 'ফারহানা হক', image: '/author2.jpg', bio: 'পরিবেশ ও জলবায়ু বিষয়ক লেখক' },
 ]
 
-export default function Sidebar2() {
+export default function Sidebar2({datas}) {
   return (
     <aside className="lg:w-1/3 space-y-8">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">সাম্প্রতিক পোস্ট</h3>
         <ul className="space-y-2">
-          {recentPosts.map((post) => (
-            <li key={post.id}>
+          {datas.map((post) => (
+            <li key={post._id}>
               <Link
-                href={`/post/${post.id}`}
+                href={`/blog/${post._id}`}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">
                 {post.title}
               </Link>

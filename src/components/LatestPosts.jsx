@@ -26,17 +26,17 @@ const latestPosts = [
   // Add more posts as needed
 ]
 
-export default function LatestPosts() {
+export default function LatestPosts({datas}) {
   return (
     (<section className="mb-12">
       <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">সাম্প্রতিক পোস্ট</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {latestPosts.map((post) => (
+        {datas.map((post) => (
           <div
-            key={post.id}
+            key={post._id}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
             <Image
-              src={post.image}
+              src={post.imageUrl}
               alt={post.title}
               width={400}
               height={200}
@@ -44,9 +44,9 @@ export default function LatestPosts() {
             <div className="p-4">
               <span className="text-sm text-blue-600 dark:text-blue-400 font-medium">{post.category}</span>
               <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{post.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{post.content.slice(0, 100)}</p>
               <Link
-                href={`/post/${post.id}`}
+                href={`/blog/${post._id}`}
                 className="text-blue-600 dark:text-blue-400 hover:underline">
                 আরও পড়ুন
               </Link>

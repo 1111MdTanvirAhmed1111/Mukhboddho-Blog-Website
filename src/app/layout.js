@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           >
 
             <Navbar />
-        <BreadCrumb  />
+        <BreadCrumb className="mx-auto"  />
        
         <Suspense fallback={<Loading/>}>
        

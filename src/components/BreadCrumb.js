@@ -7,6 +7,7 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
   } from "@/components/ui/breadcrumb"
+import { Home } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 function BreadCrumb(props) {
@@ -16,10 +17,10 @@ function BreadCrumb(props) {
     const pathArr = path.split("/").filter((item) => item !== "")
     console.log(pathArr)
   return (
-   <Breadcrumb className={`my-3 mx-4  ${props.className}`}>
+   <Breadcrumb className={`my-3 mx-4 border-4 border-grey-200 inline-block px-6 py-2 rounded-full ${props.className}`}>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+      <BreadcrumbLink href="/" ><Home /></BreadcrumbLink>
     </BreadcrumbItem>
    
     {pathArr.map((item, index) => (
