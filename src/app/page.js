@@ -13,7 +13,7 @@ import Login from './../components/login-btn';
 
 export default async function Home() {
 
-  const res = await fetch('https://mukhboddho.vercel.app/api/posts/featured')
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/featured`,{ cache: 'no-store' })
  const re = await res.json()
  
 
