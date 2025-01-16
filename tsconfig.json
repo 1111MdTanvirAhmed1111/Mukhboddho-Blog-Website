@@ -29,11 +29,19 @@
     ]
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/admin/components/UserEngagement.js", "src/app/admin/components/TopPosts.js", "src/app/admin/components/RecentSales.js", "src/app/admin/posts/page.js", "src/app/admin/settings/page.js", "src/app/admin/users/page.js", "src/components/CommentSection.js"  ],
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "src/app/admin/components/RecentSales.js",
+    "src/app/admin/components/TopPosts.js",
+    "src/app/admin/components/UserEngagement.js",
+    "src/app/admin/posts/page.js",
+    "src/app/admin/settings/page.js",
+    "src/app/admin/users/page.js",
+    "src/components/CommentSection.js",
+    "_next/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
