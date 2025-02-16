@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 async function page() {
 
-const data = await fetch('https://mukhboddho.vercel.app/api/posts/',{ cache: 'no-store' })
+const data = await fetch('http://localhost:3000/api/posts',{ cache: 'no-store' })
     const arr = await data.json()
 
 

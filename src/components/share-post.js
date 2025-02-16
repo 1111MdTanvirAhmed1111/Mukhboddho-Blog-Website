@@ -9,7 +9,7 @@ import { toast } from '@/hooks/use-toast';
 export function SharePost({ slug }) {
   const [copied, setCopied] = useState(false)
 
-  const shareUrl = `https://mukhboddho.vercel.app/blog/${slug}`
+  const shareUrl = `https://pothoczuto.xyz/blog/${slug}`
 
   const copyLink = () => {
     navigator.clipboard.writeText(shareUrl)
