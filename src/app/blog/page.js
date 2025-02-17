@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 async function page() {
 
-const data = await fetch('http://localhost:3000/api/posts',{ cache: 'no-store' })
+const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`,{ cache: 'no-store' })
     const arr = await data.json()
 
 
