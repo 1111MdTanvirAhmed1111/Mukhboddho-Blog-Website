@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import {
   Table,
@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import { getPosts, createPost, updatePost, deletePost } from '@/app/actions/posts'
 
 // Mock data for blog posts
 const initialBlogPosts = [
@@ -23,26 +24,46 @@ const initialBlogPosts = [
 ]
 
 export default function PostsPage() {
-  const [blogPosts, setBlogPosts] = useState(initialBlogPosts)
+  const [blogPosts, setBlogPosts] = useState([])
   const [newPost, setNewPost] = useState({ title: '', author: '', date: '', category: '', content: '' })
   const [editingPost, setEditingPost] = useState(null)
 
-  const handleCreate = () => {
-    setBlogPosts([...blogPosts, { ...newPost, id: Date.now(), views: 0, comments: 0 }])
-    setNewPost({ title: '', author: '', date: '', category: '', content: '' })
+  useEffect(() => {
+    fetchPosts()
+  }, [])
+
+  const fetchPosts = async () => {
+    const { posts, error } = await getPosts()
+    if (posts) {
+      setBlogPosts(posts)
+    }
+  }
+
+  const handleCreate = async () => {
+    const { post, error } = await createPost(newPost)
+    if (post) {
+      setBlogPosts([...blogPosts, post])
+      setNewPost({ title: '', author: '', date: '', category: '', content: '' })
+    }
   }
 
   const handleEdit = (post) => {
     setEditingPost(post)
   }
 
-  const handleUpdate = () => {
-    setBlogPosts(blogPosts.map(post => post.id === editingPost.id ? editingPost : post))
-    setEditingPost(null)
+  const handleUpdate = async () => {
+    const { post, error } = await updatePost(editingPost._id, editingPost)
+    if (post) {
+      setBlogPosts(blogPosts.map(p => p._id === post._id ? post : p))
+      setEditingPost(null)
+    }
   }
 
-  const handleDelete = (id) => {
-    setBlogPosts(blogPosts.filter(post => post.id !== id))
+  const handleDelete = async (id) => {
+    const { success, error } = await deletePost(id)
+    if (success) {
+      setBlogPosts(blogPosts.filter(post => post._id !== id))
+    }
   }
 
   return (
@@ -133,7 +154,7 @@ export default function PostsPage() {
         </TableHeader>
         <TableBody>
           {blogPosts.map((post) => (
-            <TableRow key={post.id}>
+            <TableRow key={post._id}>
               <TableCell>{post.title}</TableCell>
               <TableCell>{post.author}</TableCell>
               <TableCell>{post.date}</TableCell>
@@ -142,7 +163,7 @@ export default function PostsPage() {
               <TableCell>{post.category}</TableCell>
               <TableCell>
                 <Button variant="outline" className="mr-2" onClick={() => handleEdit(post)}>Edit</Button>
-                <Button variant="destructive" onClick={() => handleDelete(post.id)}>Delete</Button>
+                <Button variant="destructive" onClick={() => handleDelete(post._id)}>Delete</Button>
               </TableCell>
             </TableRow>
           ))}
