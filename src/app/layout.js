@@ -3,8 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SessionWrapper from './../components/session-wrapper';
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Suspense } from "react";
-import Loading from "./loading";
 import BreadCrumb from './../components/BreadCrumb';
 
 const geistSans = Geist({
@@ -68,9 +66,7 @@ export default function RootLayout({ children }) {
           >
             <Navbar />
             <BreadCrumb className="mx-auto" />
-            <Suspense fallback={<Loading />}>
-              {children}
-            </Suspense>
+            {children}
           </ThemeProvider>
         </SessionWrapper>
       </body>
